@@ -1,0 +1,33 @@
+testing:
+  sampling:
+    measurements_count: 20
+    total_duration_seconds: null
+    sampling_frequency_hz: 5
+  request_timeout_seconds: 3
+  simulation:
+    # Set above 0 to exercise failure handling; 0 disables fault injection.
+    failure_probability: 0.0
+
+ammeters:
+  greenlee:
+    host: 127.0.0.1
+    port: 5000
+    command: "MEASURE_GREENLEE -get_measurement"
+  entes:
+    host: 127.0.0.1
+    port: 5001
+    command: "MEASURE_ENTES -get_data"
+  circutor:
+    host: 127.0.0.1
+    port: 5002
+    command: "MEASURE_CIRCUTOR -get_measurement"
+
+analysis:
+  reference_current_a: null
+  visualization:
+    enabled: true
+
+result_management:
+  results_directory: results
+  plots_directory: results/plots
+  logs_directory: results/logs

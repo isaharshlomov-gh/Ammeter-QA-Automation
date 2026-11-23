@@ -1,0 +1,2 @@
+PyYAML>=6.0
+# Optional: matplotlib>=3.4.0 (required only when visualization is enabled)
